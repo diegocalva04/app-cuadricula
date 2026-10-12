@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="app_name">Courses</string>
+    <string name="app_name">Cuadrícula de temas</string>
     <string name="architecture">Architecture</string>
     <string name="automotive">Automotive</string>
     <string name="biology">Biology</string>

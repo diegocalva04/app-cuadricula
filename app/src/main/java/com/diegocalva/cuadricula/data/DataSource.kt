@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.courses.data
+package com.diegocalva.cuadricula.data
 
-import com.example.courses.R
-import com.example.courses.model.Topic
+import com.diegocalva.cuadricula.R
+import com.diegocalva.cuadricula.model.Topic
 
 object DataSource {
     val topics = listOf(

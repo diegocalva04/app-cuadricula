@@ -27,5 +27,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Courses"
+rootProject.name = "AppCuadricula"
 include(":app")

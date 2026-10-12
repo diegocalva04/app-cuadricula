@@ -20,11 +20,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.courses"
+    namespace = "com.diegocalva.cuadricula"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.courses"
+        applicationId = "com.diegocalva.cuadricula"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

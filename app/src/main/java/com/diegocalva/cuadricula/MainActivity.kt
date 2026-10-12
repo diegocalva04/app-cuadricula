@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.courses
+package com.diegocalva.cuadricula
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -46,9 +46,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.courses.data.DataSource
-import com.example.courses.model.Topic
-import com.example.courses.ui.theme.CoursesTheme
+import com.diegocalva.cuadricula.data.DataSource
+import com.diegocalva.cuadricula.model.Topic
+import com.diegocalva.cuadricula.ui.theme.CoursesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

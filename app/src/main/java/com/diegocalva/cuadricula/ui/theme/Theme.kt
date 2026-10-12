@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.courses.ui.theme
+package com.diegocalva.cuadricula.ui.theme
 
 import android.app.Activity
 import android.os.Build
