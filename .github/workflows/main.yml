@@ -1,6 +1,9 @@
 # Modificado en 2026 por Diego Calva para validar la adaptación del proyecto.
 name: Compilación
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -13,20 +16,16 @@ jobs:
   compilar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Preparar JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
-          distribution: 'zulu'
+          distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
 
       - name: Preparar Gradle
-        uses: gradle/actions/setup-gradle@v4
-        
-      - name: Preparar Android SDK
-        uses: android-actions/setup-android@v3
+        uses: gradle/actions/setup-gradle@v6
         
       - name: Probar y compilar el proyecto
         run: ./gradlew :app:testDebugUnitTest :app:lintDebug :app:assembleDebug
