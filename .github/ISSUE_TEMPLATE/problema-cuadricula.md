@@ -6,6 +6,8 @@ labels: ""
 assignees: ""
 ---
 
+<!-- Plantilla modificada en 2026 por Diego Calva para este proyecto. -->
+
 ## Descripción
 
 Explica con claridad qué sucede y cuál era el resultado esperado.

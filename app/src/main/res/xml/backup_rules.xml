@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modificado en 2026 por Diego Calva para definir las reglas de respaldo. -->
 <!-- Reglas de copia de seguridad para dispositivos anteriores a Android 12. -->
 <full-backup-content>
     <!-- Agrega reglas include o exclude cuando la aplicación almacene datos persistentes. -->

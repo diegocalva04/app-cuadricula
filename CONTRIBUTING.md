@@ -1,5 +1,7 @@
 # Cómo contribuir
 
+Este documento fue modificado en 2026 por Diego Calva para la adaptación del proyecto.
+
 Las mejoras deben mantener la aplicación compilable, respetar la estructura del paquete `com.diegocalva.cuadricula` y conservar los avisos de licencia presentes en los archivos derivados del proyecto original.
 
 ## Preparación de cambios

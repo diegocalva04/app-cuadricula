@@ -1,3 +1,4 @@
+# Modificado en 2026 por Diego Calva para simplificar las exclusiones del proyecto.
 */.gitignore
 .gradle/
 .DS_Store

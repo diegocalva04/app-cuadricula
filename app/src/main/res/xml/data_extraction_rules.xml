@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modificado en 2026 por Diego Calva para definir la extracción de datos. -->
 <!-- Reglas de copia y transferencia de datos para Android 12 o versiones posteriores. -->
 <data-extraction-rules>
     <cloud-backup>
