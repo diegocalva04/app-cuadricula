@@ -13,13 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.diegocalva.cuadricula.model
+package com.diegocalva.cuadricula.ui.tema
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.compose.material3.Typography
 
-data class Topic(
-    @StringRes val name: Int,
-    val availableCourses: Int,
-    @DrawableRes val imageRes: Int
-)
+// Conjunto tipográfico base de Material.
+val Tipografia = Typography()

@@ -21,7 +21,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
@@ -46,28 +45,28 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.diegocalva.cuadricula.data.DataSource
-import com.diegocalva.cuadricula.model.Topic
-import com.diegocalva.cuadricula.ui.theme.CoursesTheme
+import com.diegocalva.cuadricula.datos.FuenteDatos
+import com.diegocalva.cuadricula.modelo.Tema
+import com.diegocalva.cuadricula.ui.tema.TemaCuadricula
 
-class MainActivity : ComponentActivity() {
+class ActividadPrincipal : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
-            CoursesTheme {
-                // A surface container using the 'background' color from the theme
+            TemaCuadricula {
+                // El contenedor usa el color de fondo definido por el tema visual.
                 Surface(
                     modifier = Modifier
                         .fillMaxSize()
                         .statusBarsPadding(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    TopicGrid(
+                    CuadriculaTemas(
                         modifier = Modifier.padding(
-                            start = dimensionResource(R.dimen.padding_small),
-                            top = dimensionResource(R.dimen.padding_small),
-                            end = dimensionResource(R.dimen.padding_small),
+                            start = dimensionResource(R.dimen.espaciado_pequeno),
+                            top = dimensionResource(R.dimen.espaciado_pequeno),
+                            end = dimensionResource(R.dimen.espaciado_pequeno),
                         )
                     )
                 }
@@ -77,43 +76,41 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TopicGrid(modifier: Modifier = Modifier) {
+fun CuadriculaTemas(modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
-        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.espaciado_pequeno)),
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.espaciado_pequeno)),
         modifier = modifier
     ) {
-        items(DataSource.topics) { topic ->
-            TopicCard(topic)
+        items(FuenteDatos.temas) { tema ->
+            TarjetaTema(tema)
         }
     }
 }
 
 @Composable
-fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
-    Card {
+fun TarjetaTema(tema: Tema, modifier: Modifier = Modifier) {
+    Card(modifier = modifier) {
         Row {
-            Box {
-                Image(
-                    painter = painterResource(id = topic.imageRes),
-                    contentDescription = null,
-                    modifier = modifier
-                        .size(width = 68.dp, height = 68.dp)
-                        .aspectRatio(1f),
-                    contentScale = ContentScale.Crop
-                )
-            }
+            Image(
+                painter = painterResource(id = tema.imagenRes),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(width = 68.dp, height = 68.dp)
+                    .aspectRatio(1f),
+                contentScale = ContentScale.Crop
+            )
 
             Column {
                 Text(
-                    text = stringResource(id = topic.name),
+                    text = stringResource(id = tema.nombreRes),
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(
-                        start = dimensionResource(R.dimen.padding_medium),
-                        top = dimensionResource(R.dimen.padding_medium),
-                        end = dimensionResource(R.dimen.padding_medium),
-                        bottom = dimensionResource(R.dimen.padding_small)
+                        start = dimensionResource(R.dimen.espaciado_medio),
+                        top = dimensionResource(R.dimen.espaciado_medio),
+                        end = dimensionResource(R.dimen.espaciado_medio),
+                        bottom = dimensionResource(R.dimen.espaciado_pequeno)
                     )
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -121,12 +118,12 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
                         painter = painterResource(R.drawable.ic_grain),
                         contentDescription = null,
                         modifier = Modifier
-                            .padding(start = dimensionResource(R.dimen.padding_medium))
+                            .padding(start = dimensionResource(R.dimen.espaciado_medio))
                     )
                     Text(
-                        text = topic.availableCourses.toString(),
+                        text = tema.cursosDisponibles.toString(),
                         style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_small))
+                        modifier = Modifier.padding(start = dimensionResource(R.dimen.espaciado_pequeno))
                     )
                 }
             }
@@ -136,15 +133,15 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun TopicPreview() {
-    CoursesTheme {
-        val topic = Topic(R.string.photography, 321, R.drawable.photography)
+fun VistaPreviaTema() {
+    TemaCuadricula {
+        val tema = Tema(R.string.fotografia, 321, R.drawable.photography)
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            TopicCard(topic = topic)
+            TarjetaTema(tema = tema)
         }
     }
 }

@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.diegocalva.cuadricula.ui.theme
+package com.diegocalva.cuadricula.ui.tema
 
-import androidx.compose.material3.Typography
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
 
-// Set of Material typography styles to start with
-val Typography = Typography()
+val PrimarioOscuro = Color(0xFFD0BCFF)
+val SecundarioOscuro = Color(0xFFCCC2DC)
+val TerciarioOscuro = Color(0xFFEFB8C8)
+
+val PrimarioClaro = Color(0xFF6650A4)
+val SecundarioClaro = Color(0xFF625B71)
+val TerciarioClaro = Color(0xFF7D5260)

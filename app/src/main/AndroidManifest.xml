@@ -25,7 +25,7 @@
         android:theme="@style/Theme.Cuadricula"
         tools:targetApi="33">
         <activity
-            android:name=".MainActivity"
+            android:name=".ActividadPrincipal"
             android:exported="true"
             android:theme="@style/Theme.Cuadricula">
             <intent-filter>
