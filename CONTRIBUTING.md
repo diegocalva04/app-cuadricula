@@ -1,29 +1,18 @@
-# How to Contribute
+# Cómo contribuir
 
-We'd love to accept your patches and contributions to this project. There are
-just a few small guidelines you need to follow.
+Las mejoras deben mantener la aplicación compilable, respetar la estructura del paquete `com.diegocalva.cuadricula` y conservar los avisos de licencia presentes en los archivos derivados del proyecto original.
 
-## Contributor License Agreement
+## Preparación de cambios
 
-Contributions to this project must be accompanied by a Contributor License
-Agreement (CLA). You (or your employer) retain the copyright to your
-contribution; this simply gives us permission to use and redistribute your
-contributions as part of the project. Head over to
-<https://cla.developers.google.com/> to see your current agreements on file or
-to sign a new one.
+1. Crea una rama con un nombre breve y descriptivo.
+2. Realiza cambios pequeños y relacionados entre sí.
+3. Compila la aplicación antes de enviar la propuesta.
+4. Describe qué cambió, por qué se hizo y cómo se comprobó.
 
-You generally only need to submit a CLA once, so if you've already submitted one
-(even if it was for a different project), you probably don't need to do it
-again.
+## Revisión
 
-## Code reviews
+Las contribuciones se revisan mediante solicitudes de cambio en GitHub. Los mensajes de commit y la descripción deben escribirse en español y explicar el propósito técnico de cada modificación.
 
-All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-[GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
-information on using pull requests.
+## Licencias
 
-## Community Guidelines
-
-This project follows
-[Google's Open Source Community Guidelines](https://opensource.google/conduct/).
+Cada contribución debe ser compatible con la licencia Apache 2.0 del proyecto. No se deben eliminar los avisos de derechos ni la atribución de las fotografías.

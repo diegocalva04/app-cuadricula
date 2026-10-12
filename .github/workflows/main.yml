@@ -1,4 +1,4 @@
-name: Build
+name: Compilación
 
 on:
   pull_request:
@@ -6,23 +6,23 @@ on:
       - main
 
 jobs:
-  build:
+  compilar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set Up JDK
+      - name: Preparar JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu' # See 'Supported distributions' for available options
+          distribution: 'zulu'
           java-version: '17'
           cache: 'gradle'
 
-      - name: Setup Gradle
+      - name: Preparar Gradle
         uses: gradle/actions/setup-gradle@v4
         
-      - name: Setup Android SDK
+      - name: Preparar Android SDK
         uses: android-actions/setup-android@v3
         
-      - name: Build project 
+      - name: Compilar el proyecto
         run: ./gradlew :app:assembleDebug

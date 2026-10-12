@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2023 The Android Open Source Project
+ * Modificado en 2026 por Diego Calva para adaptar el proyecto al español.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Configuración compartida por todos los módulos del proyecto.
 plugins {
     id("com.android.application") version "8.8.0" apply false
     id("com.android.library") version "8.8.0" apply false
