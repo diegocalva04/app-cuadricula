@@ -24,5 +24,5 @@ jobs:
       - name: Preparar Android SDK
         uses: android-actions/setup-android@v3
         
-      - name: Compilar el proyecto
-        run: ./gradlew :app:assembleDebug
+      - name: Probar y compilar el proyecto
+        run: ./gradlew :app:testDebugUnitTest :app:lintDebug :app:assembleDebug
