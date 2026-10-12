@@ -73,6 +73,8 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
 
+    testImplementation("junit:junit:4.13.2")
+
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
